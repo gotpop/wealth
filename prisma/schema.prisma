@@ -41,8 +41,8 @@ model TabItem {
   content     String
   imageTitle  String
   imageUrl    String
-  imageWidth  String
-  imageHeight String
+  imageWidth  Int?
+  imageHeight Int?
   tab         Tab    @relation(fields: [tabId], references: [id], onDelete: Cascade)
   tabId       String
 }
