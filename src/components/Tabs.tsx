@@ -11,7 +11,6 @@ export const Tabs = ({ tabs }: Props) => {
   const [activeTabData, setActiveTabData] = useState(tabs[0])
 
   const handleclick = (tabItems: TabWithTabItems) => {
-    console.log('click :', tabItems);
     setActiveTabData(tabItems)
   }
 
