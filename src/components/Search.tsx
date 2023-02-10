@@ -1,11 +1,11 @@
 import { Hero } from "@prisma/client"
 
 type Props = {
-  hero: Hero
+  hero: Hero[]
 }
 
 export const Search = ({ hero }: Props) => {
-  const { input, button } = hero
+  const { input, button } = hero[0]
 
   return (
     <div className="search">

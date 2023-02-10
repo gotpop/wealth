@@ -12,15 +12,14 @@ import { Tabs } from "@/components/Tabs"
 import { ViewAll } from "@/components/ViewAll"
 
 type Props = {
-  heroData: HeroData
-  partnersData: PartnersData
-  introData: IntroData
+  heroData: HeroData[]
+  partnersData: PartnersData[]
+  introData: IntroData[]
   tabData: TabWithTabItems[]
-  viewAllData: ViewAllData
+  viewAllData: ViewAllData[]
 }
 
 const Home = ({ heroData, partnersData, introData, tabData, viewAllData }: Props) => {
-// console.log('heroData, partnersData, introData, tabData, viewAllData :', heroData, partnersData, introData, tabData, viewAllData);
   return (
     <>
       <Head>
