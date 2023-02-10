@@ -1,9 +1,10 @@
 import { Hero as HeroData, Intro as IntroData, Partners as PartnersData, ViewAll as ViewAllData } from "@prisma/client"
-import { InferGetStaticPropsType, NextPage } from "next"
+// import { InferGetStaticPropsType, NextPage } from "next"
 import prisma, { TabWithTabItems } from "@/lib/prisma"
 
 import { Content } from "@/components/Content"
 import Head from "next/head"
+import { InferGetStaticPropsType } from "next"
 import { Intro } from "@/components/Intro"
 import { Logo } from "@/components/Logo"
 import { Partners } from "@/components/Partners"
@@ -29,14 +30,16 @@ const Home = ({ heroData, partnersData, introData, tabData, viewAllData }: Props
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="site">
-        <header className="hero">
-          <Logo />
-          <Content hero={heroData} />
-          <Search hero={heroData} />
+        <header className="text-center flex items-center min-w-full justify-center">
+          <div className="container flex flex-col items-center max-w-xl">
+            <Logo />
+            <Content hero={heroData} />
+            <Search hero={heroData} />
+          </div>
         </header>
         <Partners partners={partnersData} />
         <Intro intro={introData} />
-        {/* <Tabs tabs={tabData} /> */}
+        <Tabs tabs={tabData} />
         <ViewAll viewAll={viewAllData} />
       </div>
     </>
