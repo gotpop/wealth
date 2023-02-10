@@ -17,9 +17,9 @@ export const Tabs = ({ tabs }: Props) => {
 
   return (
     <section className="tabs">
-      <nav className="flex gap-2 justify-center">
+      <nav className="flex gap-5 justify-around mb-10">
         {tabs.map((tab, i) => (
-          <TabButton key={i} tabItem={tab} handleClick={handleclick} />
+          <TabButton key={i} tabItem={tab} activeTabData={activeTabData} handleClick={handleclick} />
         ))}
       </nav>
       <Tab activeTabData={activeTabData} />

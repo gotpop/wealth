@@ -3,9 +3,10 @@ import { TabWithTabItems } from "@/lib/prisma"
 type Props = {
   tabItem: TabWithTabItems
   handleClick: (tabItems: TabWithTabItems) => void
+  activeTabData: TabWithTabItems
 }
 
-export const TabButton = ({ tabItem, handleClick }: Props) => {
+export const TabButton = ({ tabItem, handleClick, activeTabData }: Props) => {
   const { title } = tabItem
 
   return (
@@ -13,6 +14,7 @@ export const TabButton = ({ tabItem, handleClick }: Props) => {
       <button className="flex" onClick={() => handleClick(tabItem)}>
         {title}
       </button>
+      {activeTabData.title === title ? <span>Line</span> : null}
     </div>
   )
 }
