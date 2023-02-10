@@ -12,7 +12,7 @@ export const Partners = ({ partners }: Props) => {
 
   return (
     <aside className="partners-wrap">
-      <h3>{title}</h3>
+      <h3 className="font-body font-bold">{title}</h3>
       <div className="partners">
         <div className="partner">
           <Forbes />

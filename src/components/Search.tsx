@@ -10,8 +10,8 @@ export const Search = ({ hero }: Props) => {
   return (
     <div className="search">
       <div className="search-wrap">
-        <input type="text" placeholder={input} />
-        <button>{button}</button>
+        <input className="p-10 min-w-fit" type="text" placeholder={input} />
+        <button className="p-10 text-white bg-black">{button}</button>
       </div>
     </div>
   )

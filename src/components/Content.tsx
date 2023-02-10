@@ -9,9 +9,9 @@ export const Content = ({ hero }: Props) => {
   const { tag, title, content } = hero[0]
   
   return (
-    <article className="content">
-      <p>{tag}</p>
-      <h2 className="font-heading text-5xl">{title}</h2>
+    <article className="mb-9">
+      <p className="mb-9">{tag}</p>
+      <h2 className="font-heading text-5xl mb-10">{title}</h2>
       <p className="font-body">{content}</p>
     </article>
   )
