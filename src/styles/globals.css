@@ -4,19 +4,10 @@
 
 body {
   background-image: url(../../public/bg.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-position: top center;
 }
 
-.hero {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: 1110px;
-  flex-direction: column;
-  text-align: center;
-}
 
 .content {
   position: relative;
