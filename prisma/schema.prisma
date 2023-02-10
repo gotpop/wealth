@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Hero {
+  id      String @id @default(cuid())
+  title   String
+  tag     String
+  content String
+  input   String
+  button  String
+}
+
+model Partners {
+  id      String @id @default(cuid())
+  title   String
+}
+
+model Intro {
+  id      String @id @default(cuid())
+  title   String
+  tag     String
+  content String
+}
+
+model Tab {
+  id       String    @id @default(cuid())
+  name     String
+  title    String
+  tabItems TabItem[]
+}
+
+model TabItem {
+  id          String @id @default(cuid())
+  title       String
+  content     String
+  imageTitle  String
+  imageUrl    String
+  imageWidth  String
+  imageHeight String
+  tab         Tab    @relation(fields: [tabId], references: [id], onDelete: Cascade)
+  tabId       String
+}
+
+model ViewAll {
+  id      String @id @default(cuid())
+  title   String
+}
