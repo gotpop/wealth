@@ -6,13 +6,14 @@ https://gotpop-wealth.vercel.app
 
 ## Notes & features
 
-* Uses Prisma to save data to a PostgreSQL db
-* Using the Types from Prisma throughout app
+* Uses Prisma to save data to a PostgreSQL db.
+* Using the Types from Prisma throughout app.
 * Using Tailwind. No raw CSS.
-* Uses Cypress for testing
-* Because I used Tailwind I used the Web Animation API for animations
-* I've used custom hooks to shift logic into separate files
+* Uses Cypress for testing.
+* Because I used Tailwind I used the Web Animation API for animations.
+* I've used custom hooks to shift logic into separate files.
 * The page is statically generated as it wouldn't make sense to fetch any of this data from the client.
+* Uses GitHib actions to run Cypress tests & ESLint.
 
 ## Caveats
 
