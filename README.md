@@ -1,6 +1,8 @@
 # Wealth Demo
 
-A brochureware demo
+Live demo hosted on Vercel and the database on Railway.app
+
+https://gotpop-wealth.vercel.app
 
 ## Notes & features
 
