@@ -17,11 +17,21 @@ https://gotpop-wealth.vercel.app
 
 ## Caveats
 
-* There isn't a free version of the body font `Avenir`, so I've found the closest subsitute `Montserrat`. You can see they're almost identical in this [blog post](https://www.learnui.design/blog/avenir-similar-fonts.html).
+* There isn't a free version of the body font `Avenir`, so I've found the closest substitute `Montserrat`. You can see they're almost identical in this [blog post](https://www.learnui.design/blog/avenir-similar-fonts.html).
 * The icons in the tab section are raster images so may look blurry if you have a higher resolution monitor.
 * I've added web animations. Some clients like the front end developer to add page interactions and "interpret" the design and others not. Either way is fine with me.
-* Wealthfront logo was an image so I pulled a vector from thier website. Normally in cases like this I would check with the designer. Worst case I would just use the .png. 
+* Wealthfront logo was an image so I pulled a vector from their website. Normally in cases like this I would check with the designer. Worst case I would just use the .png. 
 
+## Original Design
 
+<h1 align="center">
+	<img width="100%" src="./public/images/original.png" alt="Image of design">
+</h1>
+
+## Final Website
+
+<h1 align="center">
+	<img width="100%" src="./public/images/final.png" alt="Image of website">
+</h1>
 
 
