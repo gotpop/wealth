@@ -1,3 +1,4 @@
+import { careers } from './../../prisma/seed/tabItems';
 /* eslint-disable */
 // Disable ESLint to prevent failing linting inside the Next.js repo.
 // If you're using ESLint on your project, we recommend installing the ESLint Cypress plugin instead:
@@ -10,21 +11,19 @@ describe('Homepage navigation', () => {
         cy.get('h2').contains('THE DIGITAL NOISE MAKERS IN THE FINANCIAL SPACE.')
     })
 
-    // it('Should scroll to the first panel when hero button is clicked', () => {
-    //     cy.visit('/')
+    it('Should scroll to the tab panel and show pirate item when clicked', () => {
+        cy.visit('/')
         
-    //     cy.get('.LinkIcon_link__1TjqX').click({ force: true })
-    //     cy.contains('@container queries')
-    // })
+        cy.get('[data-cy="tab-button-1"]').click()
+        cy.contains('Pirate')
+    })
 
-    // it('Scroll to the bottom and find 3 links', () => {
-    //     cy.visit('/')
-    //     cy.scrollTo('bottom')
+    it('Scroll to the bottom and find view button', () => {
+        cy.visit('/')
+        cy.scrollTo('bottom')
 
-    //     cy.contains('Local')
-    //     cy.contains('GitHub')
-    //     cy.contains('Live')
-    // })
+        cy.contains('VIEW ALL OF OUR LATEST')
+    })
 })
 
 export { }

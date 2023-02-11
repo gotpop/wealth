@@ -43,6 +43,7 @@ export const Tabs = ({ tabs }: Props) => {
             <TabButton
               key={i}
               tabItem={tab}
+              item={i}
               activeTabData={activeTabData}
               handleClick={handleclick}
             />
