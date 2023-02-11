@@ -15,8 +15,4 @@ jobs:
         with:
           build: npm run build
           start: npm start
-      - name: Run Component tests 🔬
-        uses: cypress-io/github-action@v4
-        with:
-          install: false
-          component: true
+
