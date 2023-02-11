@@ -4,7 +4,7 @@ Live demo hosted on Vercel and the database on Railway.app
 
 https://gotpop-wealth.vercel.app
 
-## Notes & features
+## Notes & Features
 
 * Uses Prisma to save data to a PostgreSQL db.
 * Using the Types from Prisma throughout app.
