@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 
 import Image from "next/image"
 import { TabItem as TabItemData } from "@prisma/client"
-import { useOnScreen } from "@/hooks/useOnScreen"
+import { useTabAnimation } from "@/hooks/useTabAnimation"
 
 type Props = {
   item: TabItemData
@@ -10,38 +10,15 @@ type Props = {
 }
 
 export const TabItem = ({ item, delay }: Props) => {
-  const theDelay = delay + 1
-  const sectionRef = useRef<HTMLDivElement | null>(null)
-  const [cachedValue, setCachedValue] = useState(item)
-
-  useEffect(() => {
-    const theProduct = sectionRef.current
-    const keyframes = [
-      { opacity: 1, scale: 1 },
-      { opacity: 0, scale: 0.5 },
-      { opacity: 1, scale: 1 },
-    ]
-    const config = {
-      duration: 400,
-      delay: 50 * theDelay,
-      fill: "forwards",
-    } as KeyframeAnimationOptions
-
-    if (theProduct) {
-      theProduct.animate(keyframes, config)
-    }
- 
-    setTimeout(() => {
-      setCachedValue(item)
-    }, 200 + (50 * theDelay))
-  }, [theDelay, item])
+  const tabRef = useRef<HTMLDivElement | null>(null)
+  const { imageUrl, imageTitle, imageWidth, imageHeight, title, content } = useTabAnimation(tabRef, item, delay)
 
   return (
     <section className="basis-60 shrink-0 grow p-10 bg-glow bg-no-repeat bg-[center_top_1rem] bg-white hover:scale-99 transition-transform">
-      <div ref={sectionRef} className="flex flex-col items-center">
-        <Image className="inline-flex mb-10" src={cachedValue.imageUrl} alt={cachedValue.imageTitle} width={cachedValue.imageWidth ? cachedValue.imageWidth : 64} height={cachedValue.imageHeight ? cachedValue.imageHeight : 64} />
-        <h4 className="font-body font-semibold text-center mb-2 text-brand-grey-6 text-[20px]">{cachedValue.title}</h4>
-        <p className="font-body text-center text-brand-grey-6 text-[16px]">{cachedValue.content}</p>
+      <div ref={tabRef} className="flex flex-col items-center">
+        <Image className="inline-flex mb-10" src={imageUrl} alt={imageTitle} width={imageWidth ? imageWidth : 64} height={imageHeight ? imageHeight : 64} />
+        <h4 className="font-body font-semibold text-center mb-2 text-brand-grey-6 text-[20px]">{title}</h4>
+        <p className="font-body text-center text-brand-grey-6 text-[16px]">{content}</p>
       </div>
     </section>
   )
