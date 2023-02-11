@@ -12,7 +12,9 @@ export const Partners = ({ partners }: Props) => {
 
   return (
     <aside className="flex flex-col w-full items-center mb-20">
-      <h3 className="font-body font-bold text-brand-grey-5 tracking-widest text-[13px]">{title}</h3>
+      <h3 className="font-body font-bold text-brand-grey-5 tracking-widest text-[13px]">
+        {title}
+      </h3>
       <div className="flex gap-10 max-w-xl">
         <div className="max-md">
           <Forbes />

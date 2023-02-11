@@ -1,4 +1,4 @@
-import { Wealth } from "./Logos/Wealth";
+import { Wealth } from "./Logos/Wealth"
 
 export const Logo = () => (
   <div className="logo mt-9 mb-28">

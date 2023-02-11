@@ -10,8 +10,14 @@ export const Search = ({ hero }: Props) => {
   return (
     <div className="flex w-full">
       <div className="flex w-full">
-        <input className="font-body py-7 px-10 w-full text-brand-grey-4" type="text" placeholder={input} />
-        <button className="py-7 px-10  text-white bg-black">{button}</button>
+        <input
+          className="font-body py-7 px-10 w-full text-brand-grey-4"
+          type="text"
+          placeholder={input}
+        />
+        <button className="py-7 px-10  text-white bg-black">
+          {button}
+        </button>
       </div>
     </div>
   )

@@ -28,9 +28,15 @@ export const Content = ({ hero }: Props) => {
 
   return (
     <article className="mb-9" ref={heroRef}>
-      <p className="font-body font-bold mb-9 text-brand-grey-2 tracking-widest text-[13px]">{tag}</p>
-      <h2 className="font-heading text-6xl mb-10 text-brand-grey-3 text-[60px]">{title}</h2>
-      <p className="inline-flex font-body text-brand-grey-2 mb-9 text-[18px]">{content}</p>
+      <p className="font-body font-bold mb-9 text-brand-grey-2 tracking-widest text-[13px]">
+        {tag}
+      </p>
+      <h2 className="font-heading text-6xl mb-10 text-brand-grey-3 text-[60px]">
+        {title}
+      </h2>
+      <p className="inline-flex font-body text-brand-grey-2 mb-9 text-[18px]">
+        {content}
+      </p>
       <Search hero={hero} />
     </article>
   )

@@ -19,7 +19,12 @@ export const Tabs = ({ tabs }: Props) => {
       <div className="flex flex-col items-center max-w-5xl">
         <nav className="flex flex-wrap w-full mb-10">
           {tabs.map((tab, i) => (
-            <TabButton key={i} tabItem={tab} activeTabData={activeTabData} handleClick={handleclick} />
+            <TabButton
+              key={i}
+              tabItem={tab}
+              activeTabData={activeTabData}
+              handleClick={handleclick}
+            />
           ))}
         </nav>
         <Tab activeTabData={activeTabData} />
