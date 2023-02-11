@@ -1,4 +1,4 @@
-name: Lint
+name: Lint 👓
 
 on:
   push:
@@ -8,11 +8,11 @@ on:
 env: # environment variables (available in any part of the action)
   NODE_VERSION: 18
 
-jobs: # list of things to do
+jobs: 
   linting:
-    name: Linting # job name (unique id)
-    runs-on: ubuntu-latest # on which machine to run
-    steps: # list of steps
+    name: Linting 
+    runs-on: ubuntu-latest 
+    steps: 
       - name: Install NodeJS
         uses: actions/setup-node@v2
         with:
