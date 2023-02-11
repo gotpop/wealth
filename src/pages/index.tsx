@@ -1,5 +1,9 @@
-import { Hero as HeroData, Intro as IntroData, Partners as PartnersData, ViewAll as ViewAllData } from "@prisma/client"
-// import { InferGetStaticPropsType, NextPage } from "next"
+import {
+  Hero as HeroData,
+  Intro as IntroData,
+  Partners as PartnersData,
+  ViewAll as ViewAllData,
+} from "@prisma/client"
 import prisma, { TabWithTabItems } from "@/lib/prisma"
 
 import { Content } from "@/components/Content"
@@ -20,13 +24,22 @@ type Props = {
   viewAllData: ViewAllData[]
 }
 
-const Home = ({ heroData, partnersData, introData, tabData, viewAllData }: Props) => {
+const Home = ({
+  heroData,
+  partnersData,
+  introData,
+  tabData,
+  viewAllData,
+}: Props) => {
   return (
     <>
       <Head>
         <title>Wealth</title>
         <meta name="description" content="Wealth app" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="site">
