@@ -14,7 +14,7 @@ const keyframes = {
   easing: "ease-out",
 } as PropertyIndexedKeyframes
 
-const timing = {
+const config = {
   duration: 300,
   delay: 0,
   fill: "both",
@@ -24,7 +24,7 @@ export const Content = ({ hero }: Props) => {
   const { tag, title, content } = hero[0]
   const heroRef = useRef(null)
   const isOnScreen = useOnScreen(heroRef)
-  usePlayReverseAnimation(heroRef, isOnScreen, keyframes, timing)
+  usePlayReverseAnimation(heroRef, isOnScreen, keyframes, config)
 
   return (
     <article className="mb-9" ref={heroRef}>

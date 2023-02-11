@@ -1,13 +1,13 @@
 import { RefObject, useEffect } from 'react'
 
-export function usePlayReverseAnimation(ref: RefObject<any>, isOnScreen: boolean, keyframes: PropertyIndexedKeyframes, timing: KeyframeAnimationOptions) {
+export function usePlayReverseAnimation(ref: RefObject<any>, isOnScreen: boolean, keyframes: PropertyIndexedKeyframes, config: KeyframeAnimationOptions) {
 
     useEffect(() => {
         const playPauseAnimations = (
             ref: HTMLDivElement | null,
             isOnScreen: boolean
         ) => {
-            const content = ref?.animate(keyframes, timing)
+            const content = ref?.animate(keyframes, config)
     
             content?.pause()
     
