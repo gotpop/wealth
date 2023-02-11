@@ -18,6 +18,9 @@ export function usePlayReverseAnimation(ref: RefObject<any>, isOnScreen: boolean
             }
         }
         if (ref.current !== null) {
+            let mql = window.matchMedia('(max-width: 600px)');
+            if (mql.matches) return
+
             playPauseAnimations(ref.current, isOnScreen)
         }
     }, [isOnScreen, keyframes, ref, config])

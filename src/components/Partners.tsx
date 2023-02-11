@@ -15,7 +15,7 @@ export const Partners = ({ partners }: Props) => {
       <h3 className="font-body font-bold text-brand-grey-5 tracking-widest text-[13px]">
         {title}
       </h3>
-      <div className="flex gap-10 max-w-xl">
+      <div className="flex flex-wrap mx-8 justify-center gap-10 max-w-xl">
         <div className="max-md">
           <Forbes />
         </div>
