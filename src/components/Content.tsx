@@ -31,7 +31,7 @@ export const Content = ({ hero }: Props) => {
       <p className="font-body font-bold mb-9 text-brand-grey-2 tracking-widest text-[13px]">
         {tag}
       </p>
-      <h2 className="font-heading text-6xl mb-10 text-brand-grey-3 text-[60px]">
+      <h2 className="font-heading text-6xl mb-8 text-brand-grey-3 text-[60px]">
         {title}
       </h2>
       <p className="inline-flex font-body text-brand-grey-2 mb-9 text-[18px]">

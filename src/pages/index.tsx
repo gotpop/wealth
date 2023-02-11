@@ -43,7 +43,7 @@ const Home = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="site">
-        <header className="text-center flex items-center min-w-full justify-center mb-10">
+        <header className="text-center flex items-center min-w-full justify-center mb-8">
           <div className="container flex flex-col items-center max-w-xl">
             <Logo />
             <Content hero={heroData} />

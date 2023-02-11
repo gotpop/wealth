@@ -1,6 +1,6 @@
 export const Forbes = () => (
   <svg
-    className="max-w-[130px]"
+    className="max-w-[120px]"
     width="100%"
     height="100%"
     viewBox="0 0 130 50"

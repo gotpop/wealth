@@ -11,11 +11,11 @@ export const Search = ({ hero }: Props) => {
     <div className="flex w-full">
       <div className="flex w-full">
         <input
-          className="font-body py-7 px-10 w-full text-brand-grey-4"
+          className="font-body py-5 px-16 w-full text-brand-grey-4"
           type="text"
           placeholder={input}
         />
-        <button className="py-7 px-10  text-white bg-black">
+        <button className="font-body font-medium text-[13px] tracking-widest py-7 px-7 text-white bg-black">
           {button}
         </button>
       </div>
