@@ -2,55 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url(../../public/images/bg.jpg);
-  background-repeat: repeat-x;
-  background-position: top center;
-}
 
 
-.content {
-  position: relative;
-  z-index: 999;
-}
-
-.partners-wrap {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.partners {
-    display: flex;
-}
-
-.partner {
-    max-width: 200px;
-}
-
-.partner svg {
-    max-width: 200px;
-    height: auto;
-    width: 100%;
-}
-
-.partners {
-  padding: 4rem;
-  text-align: center;
-}
-
-.intro {
-  padding: 4rem;
-  text-align: center;
-  
-}
-
-.tabs {
-  padding: 4rem;
-  text-align: center;
-  
-}
