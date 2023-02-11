@@ -20,5 +20,5 @@ export function usePlayReverseAnimation(ref: RefObject<any>, isOnScreen: boolean
         if (ref.current !== null) {
             playPauseAnimations(ref.current, isOnScreen)
         }
-    }, [isOnScreen, keyframes, ref, timing])
+    }, [isOnScreen, keyframes, ref, config])
 }
