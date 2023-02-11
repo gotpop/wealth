@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { Tab } from "./Tab"
 import { TabButton } from "./TabButton"
 import { TabWithTabItems } from "@/lib/prisma"
-import { Tab } from "./Tab"
+import { useState } from "react"
 
 type Props = {
   tabs: TabWithTabItems[]
@@ -15,13 +15,15 @@ export const Tabs = ({ tabs }: Props) => {
   }
 
   return (
-    <section className="tabs">
-      <nav className="flex gap-5 justify-around mb-10">
-        {tabs.map((tab, i) => (
-          <TabButton key={i} tabItem={tab} activeTabData={activeTabData} handleClick={handleclick} />
-        ))}
-      </nav>
-      <Tab activeTabData={activeTabData} />
+    <section className="flex justify-center mb-20 mr-5 ml-5">
+      <div className="flex flex-col items-center max-w-5xl">
+        <nav className="flex flex-wrap w-full mb-10">
+          {tabs.map((tab, i) => (
+            <TabButton key={i} tabItem={tab} activeTabData={activeTabData} handleClick={handleclick} />
+          ))}
+        </nav>
+        <Tab activeTabData={activeTabData} />
+      </div>
     </section>
   )
 }
