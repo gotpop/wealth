@@ -16,7 +16,7 @@ export const TabItem = ({ item, delay }: Props) => {
 
   useEffect(() => {
     const theProduct = sectionRef.current
-    const animations = [
+    const keyframes = [
       { opacity: 1, scale: 1 },
       { opacity: 0, scale: 0.5 },
       { opacity: 1, scale: 1 },
@@ -28,7 +28,7 @@ export const TabItem = ({ item, delay }: Props) => {
     } as KeyframeAnimationOptions
 
     if (theProduct) {
-      theProduct.animate(animations, config)
+      theProduct.animate(keyframes, config)
     }
  
     setTimeout(() => {
